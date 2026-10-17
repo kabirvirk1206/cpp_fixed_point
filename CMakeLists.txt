@@ -13,7 +13,7 @@ add_library(fxp INTERFACE)
 target_include_directories(fxp INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_options(fxp INTERFACE -Wall -Wextra)
 
-add_executable(fxp_tests tests/test_main.cpp tests/test_quantize.cpp)
+add_executable(fxp_tests tests/test_main.cpp tests/test_quantize.cpp tests/test_arith.cpp)
 target_link_libraries(fxp_tests PRIVATE fxp)
 
 enable_testing()
