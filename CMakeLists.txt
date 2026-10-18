@@ -16,5 +16,9 @@ target_compile_options(fxp INTERFACE -Wall -Wextra)
 add_executable(fxp_tests tests/test_main.cpp tests/test_quantize.cpp tests/test_arith.cpp)
 target_link_libraries(fxp_tests PRIVATE fxp)
 
+add_executable(error_report tools/error_report.cpp)
+target_link_libraries(error_report PRIVATE fxp)
+
+
 enable_testing()
 add_test(NAME fxp_tests COMMAND fxp_tests)
